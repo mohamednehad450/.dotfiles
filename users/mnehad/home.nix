@@ -1,11 +1,16 @@
 { config, pkgs, ... }:
-
 {
+
+  imports =
+    [
+      ./code.nix
+    ];
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "mnehad";
   home.homeDirectory = "/home/mnehad";
-  
+
   nixpkgs.config.allowUnfree = true;
 
   # This value determines the Home Manager release that your configuration is
@@ -36,45 +41,49 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-      wget
-      neofetch
-      neovim
-      vscodium
-      cargo
-      clang-tools_9
-      efibootmgr
-      elinks
-      flatpak
-      gcc
-      gimp
-      git
-      github-desktop
-      gnome.gnome-keyring
-      gnugrep
-      gnumake
-      gparted
-      gnugrep
-      grub2
-      kitty
-      openssl
-      nerdfonts
-      qemu
-      steam
-      steam-run
-      terminus-nerdfont
-      tldr
-      trash-cli
-      unzip
-      vlc
-    firefox emacs 
-    htop curl gzip zip 
-    pass 
-    sqlitebrowser 
-    calibre 
-    libreoffice 
+    wget
+    neofetch
+    neovim
+    vscodium
+    cargo
+    clang-tools_9
+    efibootmgr
+    elinks
+    flatpak
+    gcc
+    gimp
+    git
+    github-desktop
+    gnome.gnome-keyring
+    gnugrep
+    gnumake
+    gparted
+    gnugrep
+    grub2
+    kitty
+    openssl
+    nerdfonts
+    qemu
+    steam
+    steam-run
+    terminus-nerdfont
+    tldr
+    trash-cli
+    unzip
+    vlc
+    firefox
+    emacs
+    htop
+    curl
+    gzip
+    zip
+    pass
+    sqlitebrowser
+    calibre
+    libreoffice
     qbittorrent
-    audacity 
-    thunderbird 
+    audacity
+    thunderbird
     discord
     yakuake
     zsh
@@ -82,6 +91,11 @@
     nodejs_18
     kdeconnect
     chromium
+    nixd
+    nixpkgs-fmt
+    nodePackages_latest.pnpm
+    nodePackages_latest.vercel
+    nodePackages_latest.prisma
   ];
 
   programs.zsh = {
@@ -90,7 +104,7 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-      vim="nvim";
+      vim = "nvim";
       ll = "ls -l";
       update = "sudo nixos-rebuild switch";
     };
@@ -136,26 +150,6 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  # Vscode
-  programs.vscode = {
-  enable = true;
-  package = pkgs.vscodium;
-  extensions = with pkgs.vscode-extensions; [
-      asvetliakov.vscode-neovim
-      esbenp.prettier-vscode
-      github.copilot-chat
-      ms-azuretools.vscode-docker
-      bradlc.vscode-tailwindcss
-      github.vscode-pull-request-github
-      prisma.prisma
-      eamodio.gitlens
-      mhutchie.git-graph
-      streetsidesoftware.code-spell-checker
-#      codium.codium
-    ];
-  };
-  
   services.mpris-proxy.enable = true;
-
 
 }
