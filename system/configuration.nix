@@ -71,7 +71,11 @@
 
   # Enable the KDE Plasma Desktop Environment.
   services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
+  services.desktopManager.plasma6.enable = true;
+
+  # Enable Wayland for ssdm and plasma(the plasma one is redundent as wayland is the default)
+  services.xserver.displayManager.sddm.wayland.enable = true;
+  services.xserver.displayManager.defaultSession = "plasma";
 
   # Configure keymap in X11
   services.xserver = {
