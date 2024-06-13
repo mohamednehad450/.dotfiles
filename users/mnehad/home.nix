@@ -11,6 +11,7 @@
   home.username = "mnehad";
   home.homeDirectory = "/home/mnehad";
 
+  # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # This value determines the Home Manager release that your configuration is
@@ -46,7 +47,6 @@
     neovim
     vscodium
     cargo
-    clang-tools_9
     efibootmgr
     elinks
     flatpak
