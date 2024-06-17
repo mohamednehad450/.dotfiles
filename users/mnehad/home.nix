@@ -96,6 +96,7 @@
     nodePackages_latest.pnpm
     nodePackages_latest.vercel
     nodePackages_latest.prisma
+    obsidian
   ];
 
   programs.zsh = {
