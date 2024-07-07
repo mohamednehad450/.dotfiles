@@ -110,12 +110,14 @@
   users.users.mnehad = {
     isNormalUser = true;
     description = "Mohamed Nehad";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "kvm" "adbusers" ];
     packages = with pkgs; [
       kate
       #  thunderbird
     ];
   };
+
+  programs.adb.enable = true;
 
   # Install firefox.
   programs.firefox.enable = true;

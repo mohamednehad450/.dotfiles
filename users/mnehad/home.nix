@@ -96,7 +96,12 @@
     nodePackages_latest.pnpm
     nodePackages_latest.vercel
     nodePackages_latest.prisma
+    slack
     obsidian
+    ffmpeg
+    android-studio
+    youtube-dl
+    gnome.gnome-disk-utility
   ];
 
   programs.zsh = {
