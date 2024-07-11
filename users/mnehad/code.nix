@@ -8,7 +8,7 @@ let
       ref = "refs/heads/master";
       rev = "c43d9089df96cf8aca157762ed0e2ddca9fcd71e";
     })).extensions.${system};
-  extensionsList = with extensions.open-vsx; [
+  extensionsList = with extensions.vscode-marketplace; [
     asvetliakov.vscode-neovim
     esbenp.prettier-vscode
     ms-azuretools.vscode-docker
@@ -18,14 +18,12 @@ let
     eamodio.gitlens
     mhutchie.git-graph
     streetsidesoftware.code-spell-checker
-    codium.codium
     jnoortheen.nix-ide
   ];
 in
 {
   programs.vscode = {
     enable = true;
-    package = pkgs.vscodium;
     extensions = extensionsList;
   };
 }

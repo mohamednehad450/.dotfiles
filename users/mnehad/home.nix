@@ -45,7 +45,7 @@
     wget
     neofetch
     neovim
-    vscodium
+    vscode
     cargo
     efibootmgr
     elinks
@@ -54,7 +54,7 @@
     gimp
     git
     github-desktop
-    gnome.gnome-keyring
+    gnome-keyring
     gnugrep
     gnumake
     gparted
@@ -101,7 +101,7 @@
     ffmpeg
     android-studio
     youtube-dl
-    gnome.gnome-disk-utility
+    gnome-disk-utility
   ];
 
   programs.zsh = {
@@ -151,6 +151,8 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
+    ANDROID_HOME = /home/mnehad/Android/Sdk;
+    PATH = "$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools";
   };
 
   # Let Home Manager install and manage itself.
