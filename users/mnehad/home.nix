@@ -47,8 +47,6 @@
     neovim
     vscode
     cargo
-    efibootmgr
-    elinks
     flatpak
     gcc
     gimp
@@ -58,16 +56,7 @@
     gnugrep
     gnumake
     gparted
-    gnugrep
-    grub2
-    kitty
     openssl
-    nerdfonts
-    qemu
-    steam
-    steam-run
-    terminus-nerdfont
-    tldr
     trash-cli
     unzip
     vlc
@@ -77,7 +66,6 @@
     curl
     gzip
     zip
-    pass
     sqlitebrowser
     calibre
     libreoffice
@@ -100,8 +88,8 @@
     obsidian
     ffmpeg
     android-studio
-    youtube-dl
     gnome-disk-utility
+    yt-dlp
   ];
 
   programs.zsh = {
